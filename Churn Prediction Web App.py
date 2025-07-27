@@ -6,6 +6,9 @@ import streamlit as st
 
 # Load the model and encoders
 
+model_path = 'trained_model.pkl'
+encoder_path = 'encoders.pkl'
+
 with open('trained_model.sav', 'rb') as M_file:
     loaded_model = pickle.load(M_file)
 
