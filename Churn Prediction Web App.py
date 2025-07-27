@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jul 27 19:39:47 2025
-
-@author: SSCTV
-"""
 
 import numpy as np
 import pandas as pd
@@ -11,11 +5,9 @@ import pickle
 import streamlit as st
 
 # Load the model and encoders
-model_path = 'C:/Users/srini/Desktop/New folder/MachineLearning/trained_model.sav'
-encoder_path = 'C:/Users/srini/Desktop/New folder/MachineLearning/encoders.pkl'
 
-loaded_model = pickle.load(open(model_path, 'rb'))
-loaded_encoders = pickle.load(open(encoder_path, 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
+loaded_encoders = pickle.load(open('encoders.pkl', 'rb'))
 
 # Prediction function
 def churn_prediction(input_data):
