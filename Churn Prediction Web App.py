@@ -9,11 +9,11 @@ import streamlit as st
 model_path = 'trained_model.pkl'
 encoder_path = 'encoders.pkl'
 
-with open('trained_model.pkl', 'rb') as M_file:
-    loaded_model = pickle.load(M_file)
+with open(model_path, 'rb') as file:
+    loaded_model = pickle.load(file)
 
-with open('encoders.pkl', 'rb') as L_file:
-    loaded_encoders = pickle.load(L_file)
+with open(encoder_path, 'rb') as file:
+    loaded_encoders = pickle.load(file)
 
 
 # Prediction function
