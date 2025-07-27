@@ -3,11 +3,16 @@ import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
+import tensorflow as tf
 
 # Load the model and encoders
 
-loaded_model = pickle.load(open('trained_model.sav', 'rb'))
-loaded_encoders = pickle.load(open('encoders.pkl', 'rb'))
+with open('trained_model.sav', 'rb') as M_file:
+    loaded_model = pickle.load(M_file)
+
+with open('encoders.pkl', 'rb') as L_file:
+    loaded_encoders = pickle.load(L_file)
+
 
 # Prediction function
 def churn_prediction(input_data):
